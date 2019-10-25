@@ -1,0 +1,83 @@
+{
+  "name": "nodejs-babel-starter",
+  "version": "0.0.1",
+  "description": "nodeJS apllication starter kit with babel, eslint(air-bnb with flowtype and prettier), jest, travis, codecov, husky, vscode configuration(modules resolver alias like @libs, @build).",
+  "license": "MIT",
+  "repository": "git@github.com:eunchurn/nodejs-babel-starter.git",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Eunchurn Park",
+    "email": "eunchurn.park@gmail.com",
+    "url": "https://github.com/eunchurn/"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "start": "babel-node ./src/index.js",
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
+    "postcoverage": "open-cli coverage/lcov-report/index.html",
+    "lint": "eslint .",
+    "flow": "flow check",
+    "docs": "documentation readme src --section=API",
+    "postdocs": "git add README.md",
+    "clean": "rimraf dist",
+    "flowbuild": "flow-copy-source src dist",
+    "prebuild": "npm run docs && npm run clean && npm run flowbuild",
+    "build": "babel src -d dist",
+    "prerelease": "npm run lint && npm test && npm run build",
+    "release": "standard-version",
+    "postpublish": "git push origin master --follow-tags",
+    "tree": "tree -a -I 'node_modules|.git'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "nodejs",
+    "babel",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "dotenv": "8.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.6.4",
+    "@babel/core": "7.6.4",
+    "@babel/node": "7.6.3",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.6.3",
+    "@babel/preset-flow": "7.0.0",
+    "babel-eslint": "10.0.3",
+    "babel-jest": "24.9.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "documentation": "12.1.2",
+    "eslint": "6.5.1",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.4.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-flowtype": "4.3.0",
+    "eslint-plugin-flowtype-errors": "4.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "flow-bin": "0.110.0",
+    "flow-copy-source": "2.0.8",
+    "husky": "3.0.9",
+    "jest": "24.9.0",
+    "lint-staged": "9.4.2",
+    "open-cli": "5.0.0",
+    "prettier": "1.18.2",
+    "rimraf": "3.0.0",
+    "standard-version": "7.0.0"
+  }
+}
