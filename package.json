@@ -1,6 +1,6 @@
 {
   "name": "nodejs-babel-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "nodeJS apllication starter kit with babel, eslint(air-bnb with flowtype and prettier), jest, travis, codecov, husky, vscode configuration(modules resolver alias like @libs, @build).",
   "license": "MIT",
   "repository": "git@github.com:eunchurn/nodejs-babel-starter.git",
