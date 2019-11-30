@@ -1,5 +1,6 @@
 .DS_Store
 coverage
+flow-typed
 dist
 build
 node_modules

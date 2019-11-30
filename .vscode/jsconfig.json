@@ -3,9 +3,9 @@
     "target": "es6",
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"],
-      "@libs/*": ["src/libs/*"],
-      "@build/*": ["build/Release/*"]
+      "src/*": ["src/*"],
+      "libs/*": ["src/libs/*"],
+      "build/*": ["build/Release/*"]
     }
   },
   "include": ["./src/**/*"],
