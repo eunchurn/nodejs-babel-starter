@@ -25,7 +25,7 @@
     "flow:install": "flow-typed install",
     "clean": "rimraf dist",
     "flow:build": "flow-copy-source src dist",
-    "prebuild": "rm -rf dist && npm run flow:build",
+    "prebuild": "rimraf dist && npm run flow:build",
     "build": "babel src -d dist",
     "prerelease": "npm run lint && npm test && npm run build",
     "release": "standard-version",
