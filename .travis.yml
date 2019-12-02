@@ -1,7 +1,10 @@
 language: node_js
 node_js:
   - v8
+  - v10
+  - v12
 script:
+  - yarn flow:install
   - yarn lint
   - yarn test --coverage
 cache:
