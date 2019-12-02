@@ -17,9 +17,9 @@
       {
         "root": ["./"],
         "alias": {
-          "@src": "./src",
-          "@libs": "./src/libs",
-          "@build": "./build/Release"
+          "src": "./src",
+          "libs": "./src/libs",
+          "build": "./build/Release"
         }
       }
     ]
