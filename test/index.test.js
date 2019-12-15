@@ -1,4 +1,3 @@
-// @flow
 import { module1, module2 } from "libs";
 
 test("module1", () => {
