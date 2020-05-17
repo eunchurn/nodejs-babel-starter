@@ -67,7 +67,7 @@
     "eslint-config-prettier": "6.8.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-flowtype": "4.5.2",
-    "eslint-plugin-flowtype-errors": "4.1.0",
+    "eslint-plugin-flowtype-errors": "4.3.0",
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-prettier": "3.1.2",
     "flow-bin": "0.115.0",
